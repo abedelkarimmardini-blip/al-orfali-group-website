@@ -1,5 +1,6 @@
-'use client'
+﻿'use client'
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 export default function LoadingScreen() {
   const [progress, setProgress] = useState(0)
@@ -24,9 +25,7 @@ export default function LoadingScreen() {
   return (
     <div className={`loading-screen ${progress >= 100 ? 'hidden' : ''}`}>
       <div className="flex flex-col items-center gap-6">
-        <div className="text-sm font-medium tracking-[0.18em] text-white">
-          AL<span className="text-[#B5841A]">-</span>ORFALI GROUP
-        </div>
+        <Image src="/images/official/logo.jpg" alt="Al Orfali Group" width={86} height={98} className="h-24 w-[86px] object-cover" priority />
         <div className="loading-bar">
           <div className="loading-fill" style={{ width: `${Math.min(progress, 100)}%` }} />
         </div>
@@ -37,3 +36,5 @@ export default function LoadingScreen() {
     </div>
   )
 }
+
+

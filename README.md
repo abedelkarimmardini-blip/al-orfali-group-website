@@ -41,7 +41,7 @@ No environment variables or database are required for this demo.
 
 The site contains realistic demonstration copy, residence availability, pricing, team profiles, and contact details. Replace these with verified project data before a commercial launch.
 
-The hero, penthouse interior, and rooftop amenity visuals in `public/images` were generated specifically for this demo. Additional curated imagery is loaded from Unsplash and is configured in `next.config.js`.
+The visual identity and project imagery in `public/images/official` were prepared from official Al Orfali Group assets. Wide hero and day/night compositions were created from the supplied H7 Tower imagery and optimized for responsive web delivery.
 
 ## Notes
 

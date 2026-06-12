@@ -18,7 +18,7 @@ export default function Availability() {
   const titleRef = useReveal()
 
   return (
-    <section id="availability" className="py-24 bg-[#0e0b05]">
+    <section id="availability" className="py-24 bg-[#142438]">
       <div className="max-w-7xl mx-auto px-6">
         <div ref={titleRef} className="reveal mb-10">
           <div className="section-label">Live tracker</div>
@@ -31,7 +31,7 @@ export default function Availability() {
         {/* Summary */}
         <div className="grid grid-cols-3 gap-4 mb-8">
           {STATS.map(s => (
-            <div key={s.label} className="bg-white/[0.03] border border-[#B5841A]/12 rounded-xl p-5 text-center">
+            <div key={s.label} className="bg-white/[0.03] border border-[#8FA7B8]/12 rounded-xl p-5 text-center">
               <div className={`text-3xl font-medium ${s.color}`}>{s.count}</div>
               <div className="text-[10px] text-white/35 mt-1 tracking-[0.1em] uppercase">{s.label}</div>
             </div>
@@ -57,7 +57,7 @@ export default function Availability() {
           {FLOOR_PLAN_DATA.map(({ floor, units }) => (
             <div
               key={floor}
-              className="bg-white/[0.02] border border-[#B5841A]/10 rounded-lg p-3 reveal"
+              className="bg-white/[0.02] border border-[#8FA7B8]/10 rounded-lg p-3 reveal"
               style={{ animationDelay: `${(24 - floor) * 0.02}s` }}
             >
               <div className="text-[10px] text-white/35 tracking-[0.08em] mb-2">Floor {floor}</div>
@@ -81,5 +81,6 @@ export default function Availability() {
     </section>
   )
 }
+
 
 

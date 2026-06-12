@@ -5,16 +5,16 @@ module.exports = {
     extend: {
       colors: {
         gold: {
-          DEFAULT: '#B5841A',
-          light: '#D4A832',
-          dark: '#8A6010',
-          muted: 'rgba(181,132,26,0.15)',
+          DEFAULT: '#8FA7B8',
+          light: '#B9CAD5',
+          dark: '#637F96',
+          muted: 'rgba(143,167,184,0.15)',
         },
         dark: {
-          DEFAULT: '#08060f',
-          800: '#0e0b05',
-          700: '#1a1208',
-          600: '#2c1f0a',
+          DEFAULT: '#101D2B',
+          800: '#142438',
+          700: '#1B3047',
+          600: '#283B55',
         },
       },
       fontFamily: {

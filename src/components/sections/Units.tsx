@@ -43,12 +43,12 @@ export default function Units() {
   const selectedUnit = UNITS.find(u => u.id === selected)
 
   return (
-    <section id="units" className="py-24 bg-[#08060f]">
+    <section id="units" className="py-24 bg-[#101D2B]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div ref={titleRef} className="reveal mb-10">
           <div className="section-label">Floor plans</div>
-          <h2 className="font-serif text-5xl md:text-7xl text-white mt-2 mb-4">A residence<br/><span className="text-[#d8bd84] italic">entirely your own.</span></h2>
+          <h2 className="font-serif text-5xl md:text-7xl text-white mt-2 mb-4">A residence<br/><span className="text-[#E4EBEF] italic">entirely your own.</span></h2>
           <p className="text-white/40 text-sm leading-relaxed max-w-lg">
             4 unit types across 24 floors. Click any unit to view the full floor plan, interior renders, and pricing details.
           </p>
@@ -62,8 +62,8 @@ export default function Units() {
               onClick={() => { setFilter(f.value); setSelected(null) }}
               className={`repel-tag px-4 py-2 rounded-full text-xs border transition-all ${
                 filter === f.value
-                  ? 'bg-[#B5841A] text-white border-[#B5841A]'
-                  : 'bg-transparent text-white/50 border-[#B5841A]/25 hover:border-[#B5841A]/60 hover:text-white/80'
+                  ? 'bg-[#8FA7B8] text-white border-[#8FA7B8]'
+                  : 'bg-transparent text-white/50 border-[#8FA7B8]/25 hover:border-[#8FA7B8]/60 hover:text-white/80'
               }`}
             >
               {f.label}
@@ -102,7 +102,7 @@ export default function Units() {
                 <div className="text-xs text-white/40 mb-3 leading-relaxed">
                   {unit.area} m² &nbsp;·&nbsp; {unit.beds} bed &nbsp;·&nbsp; {unit.baths} bath &nbsp;·&nbsp; {unit.view}
                 </div>
-                <div className="font-serif text-xl text-[#d8bd84]">{unit.price}</div>
+                <div className="font-serif text-xl text-[#E4EBEF]">{unit.price}</div>
               </div>
             </div>
           ))}
@@ -110,13 +110,13 @@ export default function Units() {
 
         {/* Detail panel */}
         {selectedUnit && (
-          <div className="mt-6 rounded-xl overflow-hidden border border-[#B5841A]/25 bg-white/[0.02] animate-[fadeIn_0.3s_ease]">
-            <div className="flex items-center justify-between px-6 py-4 border-b border-[#B5841A]/15">
+          <div className="mt-6 rounded-xl overflow-hidden border border-[#8FA7B8]/25 bg-white/[0.02] animate-[fadeIn_0.3s_ease]">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#8FA7B8]/15">
               <div>
                 <span className="text-base font-medium text-white">{selectedUnit.name}</span>
                 <span className="text-white/40 text-sm ml-3">{selectedUnit.type.toUpperCase().replace('PH', 'Penthouse').replace('1BR','1 Bedroom').replace('2BR','2 Bedrooms').replace('3BR','3 Bedrooms')}</span>
               </div>
-              <span className="text-xl font-medium text-[#B5841A]">{selectedUnit.price}</span>
+              <span className="text-xl font-medium text-[#8FA7B8]">{selectedUnit.price}</span>
             </div>
 
             <div className="grid md:grid-cols-2">
@@ -144,15 +144,15 @@ export default function Units() {
               </div>
 
               {/* Right — description + features + CTA */}
-              <div className="p-5 border-t md:border-t-0 md:border-l border-[#B5841A]/15 flex flex-col">
+              <div className="p-5 border-t md:border-t-0 md:border-l border-[#8FA7B8]/15 flex flex-col">
                 <p className="text-sm text-white/50 leading-relaxed mb-5">{selectedUnit.desc}</p>
 
                 <div className="flex-1">
-                  <div className="text-[10px] tracking-[0.15em] uppercase text-[#B5841A] mb-3">Included features</div>
+                  <div className="text-[10px] tracking-[0.15em] uppercase text-[#8FA7B8] mb-3">Included features</div>
                   <div className="grid grid-cols-1 gap-2">
                     {FEATURES.concat(selectedUnit.type === 'ph' ? ['Private rooftop terrace'] : []).map(f => (
                       <div key={f} className="flex items-center gap-2 text-xs text-white/50">
-                        <span className="w-1 h-1 rounded-full bg-[#B5841A] flex-shrink-0" />
+                        <span className="w-1 h-1 rounded-full bg-[#8FA7B8] flex-shrink-0" />
                         {f}
                       </div>
                     ))}
@@ -173,14 +173,14 @@ export default function Units() {
                       </button>
                       <button
                         onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="magnetic w-full text-sm text-white/60 border border-white/15 hover:border-[#B5841A]/50 hover:text-white py-3 rounded transition-all"
+                        className="magnetic w-full text-sm text-white/60 border border-white/15 hover:border-[#8FA7B8]/50 hover:text-white py-3 rounded transition-all"
                       >
                         Book a private viewing
                       </button>
                     </>
                   ) : (
                     <div className="text-center text-sm text-white/30 py-3">
-                      This unit is sold. <button onClick={() => setFilter('all')} className="text-[#B5841A] underline">View available units</button>
+                      This unit is sold. <button onClick={() => setFilter('all')} className="text-[#8FA7B8] underline">View available units</button>
                     </div>
                   )}
                 </div>
@@ -192,5 +192,6 @@ export default function Units() {
     </section>
   )
 }
+
 
 

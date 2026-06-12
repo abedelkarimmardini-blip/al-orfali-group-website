@@ -1,5 +1,6 @@
-'use client'
+﻿'use client'
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const NAV_LINKS = [
   { label: 'Units', href: '#units' },
@@ -35,9 +36,10 @@ export default function Navbar() {
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-white font-medium tracking-[0.2em] text-[11px] magnetic"
+          className="flex items-center gap-3 text-white font-medium tracking-[0.2em] text-[11px] magnetic"
         >
-          AL ORFALI <span className="text-[#d8bd84]">GROUP</span>
+          <Image src="/images/official/logo.jpg" alt="" width={34} height={38} className="h-9 w-8 object-cover" />
+          <span>AL ORFALI <span className="text-[#E4EBEF]">GROUP</span></span>
         </button>
 
         {/* Desktop links */}
@@ -46,7 +48,7 @@ export default function Navbar() {
             <button
               key={link.href}
               onClick={() => scrollTo(link.href)}
-              className="text-xs text-white/50 hover:text-[#B5841A] transition-colors uppercase tracking-[0.08em] magnetic"
+              className="text-xs text-white/50 hover:text-[#8FA7B8] transition-colors uppercase tracking-[0.08em] magnetic"
             >
               {link.label}
             </button>
@@ -56,7 +58,7 @@ export default function Navbar() {
         {/* CTA */}
         <button
           onClick={() => scrollTo('#contact')}
-          className="hidden md:flex items-center gap-2 border border-[#d8bd84]/60 text-[#d8bd84] text-[9px] font-semibold uppercase px-5 py-3 tracking-[0.16em] magnetic hover:bg-[#d8bd84] hover:text-[#11100d] transition-colors"
+          className="hidden md:flex items-center gap-2 border border-[#E4EBEF]/60 text-[#E4EBEF] text-[9px] font-semibold uppercase px-5 py-3 tracking-[0.16em] magnetic hover:bg-[#E4EBEF] hover:text-[#11100d] transition-colors"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
@@ -80,19 +82,19 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#08060f] border-t border-[#B5841A]/10 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-[#101D2B] border-t border-[#8FA7B8]/10 px-6 py-4 flex flex-col gap-4">
           {NAV_LINKS.map(link => (
             <button
               key={link.href}
               onClick={() => scrollTo(link.href)}
-              className="text-sm text-white/60 hover:text-[#B5841A] transition-colors text-left uppercase tracking-widest"
+              className="text-sm text-white/60 hover:text-[#8FA7B8] transition-colors text-left uppercase tracking-widest"
             >
               {link.label}
             </button>
           ))}
           <button
             onClick={() => scrollTo('#contact')}
-            className="mt-2 bg-[#B5841A] text-white text-sm font-medium px-5 py-3 rounded tracking-wide"
+            className="mt-2 bg-[#8FA7B8] text-white text-sm font-medium px-5 py-3 rounded tracking-wide"
           >
             Inquire Now
           </button>
@@ -101,3 +103,4 @@ export default function Navbar() {
     </nav>
   )
 }
+

@@ -21,11 +21,11 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24" style={{ background: 'linear-gradient(160deg, #1a1208 0%, #0e0b05 100%)' }}>
+    <section id="contact" className="py-24" style={{ background: 'linear-gradient(160deg, #1B3047 0%, #142438 100%)' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div ref={titleRef} className="reveal mb-10">
           <div className="section-label">Get in touch</div>
-          <h2 className="font-serif text-5xl md:text-7xl text-white mt-2 mb-4">Begin your<br/><span className="text-[#d8bd84] italic">private conversation.</span></h2>
+          <h2 className="font-serif text-5xl md:text-7xl text-white mt-2 mb-4">Begin your<br/><span className="text-[#E4EBEF] italic">private conversation.</span></h2>
           <p className="text-white/40 text-sm leading-relaxed max-w-lg">
             Pre-launch pricing is available for a limited number of units. Fill in your details and our team will reach out within 2 hours.
           </p>
@@ -33,7 +33,7 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Form */}
-          <div className="reveal-left bg-white/[0.03] border border-[#B5841A]/20 rounded-2xl p-7">
+          <div className="reveal-left bg-white/[0.03] border border-[#8FA7B8]/20 rounded-2xl p-7">
             {sent ? (
               <div className="flex flex-col items-center justify-center h-full py-10 text-center">
                 <div className="w-14 h-14 rounded-full bg-[#25D366]/20 flex items-center justify-center mb-4">
@@ -43,7 +43,7 @@ export default function Contact() {
                 </div>
                 <h3 className="text-lg font-medium text-white mb-2">WhatsApp opened!</h3>
                 <p className="text-white/45 text-sm">Your inquiry has been pre-filled. Hit send in WhatsApp and our team will reply within 2 hours.</p>
-                <button onClick={() => setSent(false)} className="mt-6 text-xs text-[#B5841A] underline">Send another inquiry</button>
+                <button onClick={() => setSent(false)} className="mt-6 text-xs text-[#8FA7B8] underline">Send another inquiry</button>
               </div>
             ) : (
               <>
@@ -53,7 +53,7 @@ export default function Contact() {
                     <input
                       name="name" value={form.name} onChange={handleChange}
                       placeholder="Your full name"
-                      className="w-full bg-white/[0.05] border border-[#B5841A]/20 rounded-lg px-4 py-3 text-sm text-white placeholder-white/25 focus:outline-none focus:border-[#B5841A]/60 transition-colors"
+                      className="w-full bg-white/[0.05] border border-[#8FA7B8]/20 rounded-lg px-4 py-3 text-sm text-white placeholder-white/25 focus:outline-none focus:border-[#8FA7B8]/60 transition-colors"
                     />
                   </div>
                   <div>
@@ -61,7 +61,7 @@ export default function Contact() {
                     <input
                       name="phone" value={form.phone} onChange={handleChange}
                       placeholder="+961 70 000 000"
-                      className="w-full bg-white/[0.05] border border-[#B5841A]/20 rounded-lg px-4 py-3 text-sm text-white placeholder-white/25 focus:outline-none focus:border-[#B5841A]/60 transition-colors"
+                      className="w-full bg-white/[0.05] border border-[#8FA7B8]/20 rounded-lg px-4 py-3 text-sm text-white placeholder-white/25 focus:outline-none focus:border-[#8FA7B8]/60 transition-colors"
                     />
                   </div>
                 </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                   <div>
                     <label className="block text-[10px] tracking-[0.12em] uppercase text-white/40 mb-2">Preferred unit</label>
                     <select name="unit" value={form.unit} onChange={handleChange}
-                      className="w-full bg-[#1a1208] border border-[#B5841A]/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#B5841A]/60 transition-colors">
+                      className="w-full bg-[#1B3047] border border-[#8FA7B8]/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#8FA7B8]/60 transition-colors">
                       <option>1 Bedroom — from $145,000</option>
                       <option>2 Bedrooms — from $220,000</option>
                       <option>3 Bedrooms — from $330,000</option>
@@ -79,7 +79,7 @@ export default function Contact() {
                   <div>
                     <label className="block text-[10px] tracking-[0.12em] uppercase text-white/40 mb-2">How did you find us?</label>
                     <select name="source" value={form.source} onChange={handleChange}
-                      className="w-full bg-[#1a1208] border border-[#B5841A]/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#B5841A]/60 transition-colors">
+                      className="w-full bg-[#1B3047] border border-[#8FA7B8]/20 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#8FA7B8]/60 transition-colors">
                       <option>Instagram / Facebook</option>
                       <option>Friend / Family</option>
                       <option>Google Search</option>
@@ -94,7 +94,7 @@ export default function Contact() {
                     name="message" value={form.message} onChange={handleChange}
                     placeholder="e.g. I'd prefer a high floor with sea view…"
                     rows={3}
-                    className="w-full bg-white/[0.05] border border-[#B5841A]/20 rounded-lg px-4 py-3 text-sm text-white placeholder-white/25 focus:outline-none focus:border-[#B5841A]/60 transition-colors resize-none"
+                    className="w-full bg-white/[0.05] border border-[#8FA7B8]/20 rounded-lg px-4 py-3 text-sm text-white placeholder-white/25 focus:outline-none focus:border-[#8FA7B8]/60 transition-colors resize-none"
                   />
                 </div>
                 <div className="grid sm:grid-cols-2 gap-3">
@@ -109,7 +109,7 @@ export default function Contact() {
                     Send on WhatsApp
                   </button>
                   <a href="tel:+9611234567"
-                    className="magnetic flex items-center justify-center gap-2 text-sm text-white/60 border border-white/15 hover:border-[#B5841A]/50 hover:text-white py-3.5 rounded-lg transition-all">
+                    className="magnetic flex items-center justify-center gap-2 text-sm text-white/60 border border-white/15 hover:border-[#8FA7B8]/50 hover:text-white py-3.5 rounded-lg transition-all">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
                     </svg>
@@ -131,8 +131,8 @@ export default function Contact() {
                 { title: 'Response within 2 hours', desc: 'Our sales team is available Monday–Saturday, 9am–7pm. WhatsApp replies within 2 hours.' },
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 mb-5">
-                  <div className="w-6 h-6 rounded-full border border-[#B5841A]/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#B5841A]" />
+                  <div className="w-6 h-6 rounded-full border border-[#8FA7B8]/40 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#8FA7B8]" />
                   </div>
                   <div>
                     <div className="text-sm font-medium text-white mb-1">{item.title}</div>
@@ -141,11 +141,11 @@ export default function Contact() {
                 </div>
               ))}
             </div>
-            <div className="border-t border-[#B5841A]/15 pt-6 mt-4">
+            <div className="border-t border-[#8FA7B8]/15 pt-6 mt-4">
               <div className="text-[10px] tracking-[0.15em] uppercase text-white/25 mb-3">Office hours</div>
               <div className="text-sm text-white/50">Monday – Saturday &nbsp;·&nbsp; 9:00 am – 7:00 pm</div>
               <div className="text-sm text-white/50 mt-1">Verdun, Beirut, Lebanon</div>
-              <div className="text-sm text-[#B5841A] mt-1">+961 1 234 567</div>
+              <div className="text-sm text-[#8FA7B8] mt-1">+961 1 234 567</div>
             </div>
           </div>
         </div>
@@ -153,5 +153,6 @@ export default function Contact() {
     </section>
   )
 }
+
 
 

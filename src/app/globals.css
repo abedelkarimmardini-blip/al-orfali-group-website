@@ -1,15 +1,15 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --gold: #c7a45d;
-  --gold-light: #ddc07e;
-  --gold-muted: rgba(181, 132, 26, 0.15);
-  --dark: #080806;
-  --dark-800: #0d0d0a;
-  --dark-700: #15140f;
-  --dark-600: #2c1f0a;
+  --gold: #F2F4F2;
+  --gold-light: #FFFFFF;
+  --gold-muted: rgba(143, 167, 184, 0.15);
+  --dark: #101D2B;
+  --dark-800: #142438;
+  --dark-700: #1B3047;
+  --dark-600: #283B55;
 }
 
 * { box-sizing: border-box; }
@@ -29,13 +29,13 @@ body {
   font-family: Georgia, 'Times New Roman', serif;
 }
 
-::selection { background: #c7a45d; color: #080806; }
+::selection { background: #F2F4F2; color: #101D2B; }
 
 section { position: relative; }
 
 section[id] { scroll-margin-top: 72px; }
 
-/* ── CUSTOM CURSOR ── */
+/* â”€â”€ CUSTOM CURSOR â”€â”€ */
 .cursor-dot {
   position: fixed;
   width: 8px; height: 8px;
@@ -51,7 +51,7 @@ section[id] { scroll-margin-top: 72px; }
 .cursor-ring {
   position: fixed;
   width: 40px; height: 40px;
-  border: 1px solid rgba(181, 132, 26, 0.5);
+  border: 1px solid rgba(143, 167, 184, 0.5);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -61,28 +61,28 @@ section[id] { scroll-margin-top: 72px; }
 }
 
 .cursor-dot.hover { width: 12px; height: 12px; background: var(--gold-light); }
-.cursor-ring.hover { width: 60px; height: 60px; border-color: rgba(181, 132, 26, 0.9); }
+.cursor-ring.hover { width: 60px; height: 60px; border-color: rgba(143, 167, 184, 0.9); }
 .cursor-dot.click { width: 6px; height: 6px; }
 .cursor-ring.click { width: 30px; height: 30px; }
 
-/* ── SMOOTH SCROLL (Lenis) ── */
+/* â”€â”€ SMOOTH SCROLL (Lenis) â”€â”€ */
 html.lenis { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 
-/* ── SECTION BASE ── */
+/* â”€â”€ SECTION BASE â”€â”€ */
 .section-label {
   font-size: 9px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #d8bd84;
+  color: #E4EBEF;
   margin-bottom: 12px;
 }
 
-/* ── PARALLAX LAYERS ── */
+/* â”€â”€ PARALLAX LAYERS â”€â”€ */
 .parallax-layer { will-change: transform; }
 
-/* ── SCROLL REVEAL ── */
+/* â”€â”€ SCROLL REVEAL â”€â”€ */
 .reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -108,7 +108,7 @@ html.lenis { height: auto; }
 }
 .reveal-right.visible { opacity: 1; transform: translateX(0); }
 
-/* ── FLOATING ANIMATION ── */
+/* â”€â”€ FLOATING ANIMATION â”€â”€ */
 @keyframes floatUp {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   33%       { transform: translateY(-14px) rotate(0.4deg); }
@@ -127,11 +127,11 @@ html.lenis { height: auto; }
 }
 
 @keyframes borderGlow {
-  0%, 100% { border-color: rgba(181, 132, 26, 0.2); }
-  50%       { border-color: rgba(181, 132, 26, 0.6); }
+  0%, 100% { border-color: rgba(143, 167, 184, 0.2); }
+  50%       { border-color: rgba(143, 167, 184, 0.6); }
 }
 
-/* ── GOLD SHIMMER TEXT ── */
+/* â”€â”€ GOLD SHIMMER TEXT â”€â”€ */
 .gold-shimmer {
   background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
   background-size: 200% auto;
@@ -141,25 +141,25 @@ html.lenis { height: auto; }
   animation: shimmer 3s linear infinite;
 }
 
-/* ── MAGNETIC BUTTON ── */
+/* â”€â”€ MAGNETIC BUTTON â”€â”€ */
 .magnetic {
   display: inline-block;
   transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* ── REPEL TAGS ── */
+/* â”€â”€ REPEL TAGS â”€â”€ */
 .repel-tag {
   transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1),
               border-color 0.15s, color 0.15s, background 0.15s;
 }
 
-/* ── UNIT CARD ── */
+/* â”€â”€ UNIT CARD â”€â”€ */
 .unit-card {
-  border: 1px solid rgba(216, 189, 132, 0.12);
+  border: 1px solid rgba(143, 167, 184, 0.12);
   transition: border-color 0.4s, transform 0.5s, background 0.4s;
 }
 .unit-card:hover {
-  border-color: rgba(216, 189, 132, 0.55);
+  border-color: rgba(143, 167, 184, 0.55);
   transform: translateY(-8px);
   background: rgba(255,255,255,.04);
 }
@@ -168,28 +168,28 @@ html.lenis { height: auto; }
   border-width: 1px;
 }
 
-/* ── NAVBAR ── */
+/* â”€â”€ NAVBAR â”€â”€ */
 .navbar-blur {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: rgba(8, 8, 6, 0.82);
-  border-bottom: 1px solid rgba(216, 189, 132, 0.12);
+  background: rgba(16, 29, 43, 0.88);
+  border-bottom: 1px solid rgba(143, 167, 184, 0.12);
 }
 
-/* ── GRID LINE BG ── */
+/* â”€â”€ GRID LINE BG â”€â”€ */
 .grid-bg {
   background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(181,132,26,0.03) 60px, rgba(181,132,26,0.03) 61px),
-    repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(181,132,26,0.03) 60px, rgba(181,132,26,0.03) 61px);
+    repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(143,167,184,0.03) 60px, rgba(143,167,184,0.03) 61px),
+    repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(143,167,184,0.03) 60px, rgba(143,167,184,0.03) 61px);
 }
 
-/* ── SCROLLBAR ── */
+/* â”€â”€ SCROLLBAR â”€â”€ */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--dark); }
-::-webkit-scrollbar-thumb { background: rgba(181, 132, 26, 0.4); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: rgba(143, 167, 184, 0.4); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
-/* ── LOADING SCREEN ── */
+/* â”€â”€ LOADING SCREEN â”€â”€ */
 .loading-screen {
   position: fixed; inset: 0; background: var(--dark);
   display: flex; align-items: center; justify-content: center;
@@ -197,14 +197,14 @@ html.lenis { height: auto; }
 }
 .loading-screen.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 .loading-bar {
-  width: 160px; height: 1px; background: rgba(181,132,26,0.2); border-radius: 1px; overflow: hidden;
+  width: 160px; height: 1px; background: rgba(143,167,184,0.2); border-radius: 1px; overflow: hidden;
 }
 .loading-fill {
   height: 100%; background: var(--gold); width: 0%;
   transition: width 0.05s linear;
 }
 
-/* ── MOBILE CURSOR OFF ── */
+/* â”€â”€ MOBILE CURSOR OFF â”€â”€ */
 @media (hover: none) {
   body { cursor: auto; }
   .cursor-dot, .cursor-ring { display: none; }
@@ -215,7 +215,9 @@ html.lenis { height: auto; }
   .reveal-left.visible, .reveal-right.visible { transform: translateY(0); }
 }
 
-/* ── REDUCED MOTION ── */
+/* â”€â”€ REDUCED MOTION â”€â”€ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+

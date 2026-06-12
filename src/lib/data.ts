@@ -2,62 +2,62 @@
   {
     id: 1, name: 'Unit A-03', type: '1br', beds: 1, baths: 1, area: 78,
     floor: 3, price: '$145,000', priceNum: 145000, status: 'available' as const,
-    img: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80',
-    intImg: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80',
+    img: '/images/official/project-framed.jpg',
+    intImg: '/images/official/h7-day.jpg',
     view: 'City view', payment: '40/60 plan',
     desc: 'Bright 1-bedroom on floor 3 with open city views. Modern open-plan layout with floor-to-ceiling windows and premium Italian fittings throughout.',
   },
   {
     id: 2, name: 'Unit B-07', type: '2br', beds: 2, baths: 2, area: 122,
     floor: 7, price: '$235,000', priceNum: 235000, status: 'available' as const,
-    img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80',
-    intImg: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80',
+    img: '/images/official/h7-night.jpg',
+    intImg: '/images/official/rooftop-terrace.jpg',
     view: 'East & north view', payment: '40/60 plan',
     desc: 'Corner 2-bedroom unit with wrap-around balcony. Double-aspect views facing east and north, with a master suite that captures the morning sun.',
   },
   {
     id: 3, name: 'Unit C-11', type: '2br', beds: 2, baths: 2, area: 135,
     floor: 11, price: '$265,000', priceNum: 265000, status: 'reserved' as const,
-    img: 'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80',
-    intImg: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80',
+    img: '/images/official/concept-to-reality.jpg',
+    intImg: '/images/official/day-night-banner.jpg',
     view: 'Panoramic city', payment: '40/60 plan',
     desc: 'Premium 2-bedroom on floor 11. Spacious master suite with en-suite bathroom, walk-in wardrobe, and a chef-level kitchen with island seating.',
   },
   {
     id: 4, name: 'Unit D-16', type: '3br', beds: 3, baths: 2, area: 178,
     floor: 16, price: '$345,000', priceNum: 345000, status: 'available' as const,
-    img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80',
-    intImg: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+    img: '/images/official/project-framed.jpg',
+    intImg: '/images/official/h7-day.jpg',
     view: 'Beirut skyline', payment: '40/60 plan',
     desc: 'Spacious 3-bedroom with panoramic Beirut skyline views. A chef\'s kitchen opens to a generous dining terrace — perfect for entertaining.',
   },
   {
     id: 5, name: 'Unit E-05', type: '1br', beds: 1, baths: 1, area: 82,
     floor: 5, price: '$158,000', priceNum: 158000, status: 'sold' as const,
-    img: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80',
-    intImg: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+    img: '/images/official/h7-night.jpg',
+    intImg: '/images/official/rooftop-terrace.jpg',
     view: 'City view', payment: 'Sold',
     desc: 'Compact luxury 1-bedroom on floor 5. Ideal for investment or a young professional lifestyle. Already sold — similar units available on floor 3.',
   },
   {
     id: 6, name: 'Penthouse I', type: 'ph', beds: 4, baths: 3, area: 268,
     floor: 24, price: '$720,000', priceNum: 720000, status: 'available' as const,
-    img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80',
-    intImg: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80',
+    img: '/images/official/concept-to-reality.jpg',
+    intImg: '/images/official/day-night-banner.jpg',
     view: '360° Beirut & sea', payment: '30/70 plan',
     desc: 'The crown jewel of Al Orfali Tower. A 268m² duplex penthouse with a private rooftop terrace, plunge pool, and unobstructed 360° views over Beirut and the Mediterranean.',
   },
 ]
 
 export const GALLERY = [
-  { id: 1, cat: 'exterior', src: '/images/al-orfali-hero.png', caption: 'Tower exterior — north facade' },
-  { id: 2, cat: 'interior', src: '/images/penthouse-interior.png', caption: 'Living room — 2BR unit render' },
-  { id: 3, cat: 'amenities', src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80', caption: 'Lobby & reception' },
-  { id: 4, cat: 'interior', src: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&q=80', caption: 'Master bedroom — penthouse' },
-  { id: 5, cat: 'interior', src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80', caption: 'Kitchen — 3BR unit' },
-  { id: 6, cat: 'amenities', src: '/images/rooftop-pool.png', caption: 'Rooftop pool deck' },
-  { id: 7, cat: 'exterior', src: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80', caption: 'Tower — south-east elevation' },
-  { id: 8, cat: 'interior', src: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80', caption: 'Bathroom — premium finishes' },
+  { id: 1, cat: 'exterior', src: '/images/official/hero-official.jpg', caption: 'H7 Tower — signature arrival' },
+  { id: 2, cat: 'exterior', src: '/images/official/h7-day.jpg', caption: 'H7 Tower — daylight elevation' },
+  { id: 3, cat: 'exterior', src: '/images/official/h7-night.jpg', caption: 'H7 Tower — illuminated facade' },
+  { id: 4, cat: 'amenities', src: '/images/official/rooftop-terrace.jpg', caption: 'Private landscaped terrace' },
+  { id: 5, cat: 'exterior', src: '/images/official/concept-to-reality.jpg', caption: 'From architectural vision to reality' },
+  { id: 6, cat: 'exterior', src: '/images/official/project-framed.jpg', caption: 'Sculptural curves and panoramic glass' },
+  { id: 7, cat: 'exterior', src: '/images/official/day-night-banner.jpg', caption: 'A landmark presence, day and night' },
+  { id: 8, cat: 'amenities', src: '/images/official/rooftop-terrace.jpg', caption: 'Outdoor residents lounge' },
 ]
 
 export const LOCATION_TAGS = [
@@ -106,6 +106,8 @@ export const FLOOR_PLAN_DATA = Array.from({ length: 24 }, (_, i) => {
     }),
   }
 })
+
+
 
 
 

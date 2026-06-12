@@ -20,13 +20,13 @@ export default function Gallery() {
   const filtered = cat === 'all' ? GALLERY : GALLERY.filter(g => g.cat === cat)
 
   return (
-    <section id="gallery" className="py-24 bg-[#08060f]">
+    <section id="gallery" className="py-24 bg-[#101D2B]">
       <div className="max-w-7xl mx-auto px-6">
         <div ref={titleRef} className="reveal mb-10">
           <div className="section-label">The collection</div>
-          <h2 className="font-serif text-5xl md:text-7xl text-white mt-2 mb-4">Designed for a life<br/><span className="text-[#d8bd84] italic">without compromise.</span></h2>
+          <h2 className="font-serif text-5xl md:text-7xl text-white mt-2 mb-4">Designed for a life<br/><span className="text-[#E4EBEF] italic">without compromise.</span></h2>
           <p className="text-white/40 text-sm leading-relaxed">
-            Renders, interior photography, and lifestyle imagery — everything to help you envision your future home.
+            Explore the official architectural vision of H7 Tower, from the first sketch to its day and night presence.
           </p>
         </div>
 
@@ -38,8 +38,8 @@ export default function Gallery() {
               onClick={() => setCat(c.value)}
               className={`repel-tag px-4 py-2 rounded-full text-xs border transition-all ${
                 cat === c.value
-                  ? 'bg-[#B5841A] text-white border-[#B5841A]'
-                  : 'bg-transparent text-white/50 border-[#B5841A]/25 hover:border-[#B5841A]/60 hover:text-white/80'
+                  ? 'bg-[#8FA7B8] text-white border-[#8FA7B8]'
+                  : 'bg-transparent text-white/50 border-[#8FA7B8]/25 hover:border-[#8FA7B8]/60 hover:text-white/80'
               }`}
             >
               {c.label}
@@ -107,4 +107,5 @@ export default function Gallery() {
     </section>
   )
 }
+
 

@@ -13,7 +13,7 @@ export default function About() {
   const titleRef = useReveal()
 
   return (
-    <section id="about" className="py-24 bg-[#08060f]">
+    <section id="about" className="py-24 bg-[#101D2B]">
       <div className="max-w-7xl mx-auto px-6">
         <div ref={titleRef} className="reveal mb-14">
           <div className="section-label">Why Al Orfali Group</div>
@@ -28,10 +28,10 @@ export default function About() {
           {TRUST_STATS.map((stat, i) => (
             <div
               key={i}
-              className="reveal bg-white/[0.02] border border-[#B5841A]/15 rounded-xl p-6 text-center"
+              className="reveal bg-white/[0.02] border border-[#8FA7B8]/15 rounded-xl p-6 text-center"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              <div className="text-4xl font-medium text-[#B5841A] mb-2">
+              <div className="text-4xl font-medium text-[#8FA7B8] mb-2">
                 <Counter target={stat.num} suffix={stat.suffix} />
               </div>
               <div className="text-[10px] text-white/35 tracking-[0.12em] uppercase">{stat.label}</div>
@@ -40,11 +40,11 @@ export default function About() {
         </div>
 
         <div className="reveal relative h-[320px] md:h-[520px] overflow-hidden mb-16">
-          <Image src="/images/penthouse-interior.png" alt="Al Orfali penthouse interior" fill sizes="(max-width: 768px) 100vw, 1280px" className="object-cover" />
+          <Image src="/images/official/day-night-banner.jpg" alt="H7 Tower from day to night" fill sizes="(max-width: 768px) 100vw, 1280px" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent" />
           <div className="absolute left-6 bottom-6 md:left-10 md:bottom-10 max-w-sm">
             <div className="section-label">Our design philosophy</div>
-            <p className="font-serif text-2xl md:text-4xl leading-tight text-white">Quiet luxury, shaped around the way you live.</p>
+            <p className="font-serif text-2xl md:text-4xl leading-tight text-white">A landmark presence, from first light to evening.</p>
           </div>
         </div>
 
@@ -60,13 +60,13 @@ export default function About() {
               Our new tower combines Lebanese craftsmanship with international design standards. Every detail — from the Italian marble lobbies to the smart building management system — reflects our belief that home is the most important investment a family makes.
             </p>
             <div className="flex gap-4 flex-wrap">
-              <div className="text-[10px] tracking-[0.15em] uppercase text-[#B5841A] border border-[#B5841A]/30 px-4 py-2 rounded">
+              <div className="text-[10px] tracking-[0.15em] uppercase text-[#8FA7B8] border border-[#8FA7B8]/30 px-4 py-2 rounded">
                 ISO 9001 Certified
               </div>
-              <div className="text-[10px] tracking-[0.15em] uppercase text-[#B5841A] border border-[#B5841A]/30 px-4 py-2 rounded">
+              <div className="text-[10px] tracking-[0.15em] uppercase text-[#8FA7B8] border border-[#8FA7B8]/30 px-4 py-2 rounded">
                 Licensed Developer
               </div>
-              <div className="text-[10px] tracking-[0.15em] uppercase text-[#B5841A] border border-[#B5841A]/30 px-4 py-2 rounded">
+              <div className="text-[10px] tracking-[0.15em] uppercase text-[#8FA7B8] border border-[#8FA7B8]/30 px-4 py-2 rounded">
                 OGERO Fiber-ready
               </div>
             </div>
@@ -79,9 +79,9 @@ export default function About() {
               {TEAM.map((member, i) => (
                 <div
                   key={i}
-                  className="bg-white/[0.02] border border-[#B5841A]/12 rounded-xl p-4 hover:border-[#B5841A]/30 transition-colors"
+                  className="bg-white/[0.02] border border-[#8FA7B8]/12 rounded-xl p-4 hover:border-[#8FA7B8]/30 transition-colors"
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#B5841A]/20 flex items-center justify-center text-[#B5841A] text-sm font-medium mb-3">
+                  <div className="w-10 h-10 rounded-full bg-[#8FA7B8]/20 flex items-center justify-center text-[#8FA7B8] text-sm font-medium mb-3">
                     {member.initials}
                   </div>
                   <div className="text-sm font-medium text-white">{member.name}</div>
@@ -95,5 +95,6 @@ export default function About() {
     </section>
   )
 }
+
 
 
